@@ -3,9 +3,10 @@ function filterselection(c){
   var x, i;
   x = document.getElementsByClassName("column");
   if(c=="all") c="";
-  for(i = 0; i < x.length; ; i++) {
+  for(i = 0; i < x.length; i++){
     removeClass(x[i], "show");
-    if (x[i].className).indexof(c) > -1) addClass(x[i], "show");
+    if (x[i].className.indexof(c) > -1) {
+        addClass(x[i], "show");}
   }
 }
 
