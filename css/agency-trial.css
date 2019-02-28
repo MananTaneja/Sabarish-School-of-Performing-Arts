@@ -195,9 +195,10 @@ img::-moz-selection {
   height: 100vh;
   margin: 0;
   display: flex;
-  background-image: url(../img/background-image.jpeg);
+  background-image: url(../img/background-image.png);
   background-size: cover;
 }
+
 
 #box1 {
   display: flex;
@@ -233,6 +234,7 @@ img::-moz-selection {
     margin-top: 3rem;
     padding-top: 1.2rem; 
     display: block;
+    background-image: url(../img/background-image-mobile.jpg);
   }
   #box1 {
     align-items: initial;
@@ -277,6 +279,9 @@ img::-moz-selection {
 @media(max-width: 600px) {
   .list-block {
     float: none;
+  }
+  .grid-wrap {
+    margin: auto;
   }
 }
 
@@ -346,6 +351,11 @@ img::-moz-selection {
   transition: opacity 0.35s ease;
 }
 
+@media(max-width: 600px) {
+  .list-block .classes {
+    width: 300px;
+  }
+}
 .list-block figcaption {
   position: absolute;
   top: 50%;
@@ -404,7 +414,6 @@ img::-moz-selection {
 
 
 
-/*----page styles---*/
 
 /* Filter Gallery */
 
@@ -442,6 +451,7 @@ img::-moz-selection {
 
 #portfolio img {
   height: 800px;
+  border-radius: 8%;
 }
 
 
