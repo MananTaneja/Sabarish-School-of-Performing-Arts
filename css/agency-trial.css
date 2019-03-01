@@ -159,6 +159,10 @@ img::-moz-selection {
   color: #fed136;
 }
 
+
+
+
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -259,6 +263,76 @@ img::-moz-selection {
 .service-heading {
   margin: 15px 0;
   text-transform: none;
+}
+
+/* Style for Brochure Pop-up */
+
+
+#brochure-image {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#brochure-image:hover {
+  opacity: 0.7;
+}
+
+#brochure-modal {
+  display: none;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#brochure-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#brochure-image {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+#close-brochure {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-brochure:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #brochure-image {
+    width: 100%;
+  }
 }
 
 /*Classes Gallery*/
@@ -410,8 +484,26 @@ img::-moz-selection {
 .demo-2 figure:hover figcaption p {
   margin-top: 0;
 }
-/* Modal for Classes Images */
+/* Pop-up Modals for instructors and classes */
 
+.instructor-img:hover {
+  filter: blur(2px);
+}
+
+
+
+.modal-content {
+  background-color: rgba(233, 236, 239, 1); 
+}
+
+.modal-content .modal-header {
+  background-color: rgb(0, 109, 111);
+  color: 	#F0FFFF;
+}
+
+.close {
+  color: #F0FFFF;
+}
 
 
 

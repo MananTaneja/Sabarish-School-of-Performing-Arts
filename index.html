@@ -62,12 +62,16 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./img/brochure.jpg">
+            <button class="nav-link" id="brochure" onclick="dispBroche()" style="background:none; border:none; cursor: pointer; outline:none;">
               <span style="color:greenyellow;">
                 <i class="fas fa-sticky-note"></i>
-              </span>
-            </a>
+              </a>
+            </button>
           </li>
+          <div id="brochure-modal">
+            <button id="close-brochure" onclick="hideBroche()" style="background:none; border:none; cursor: pointer; outline:none;">&times;</button>
+            <img src="./img/brochure.jpg" alt="" id="brochure-image">
+          </div>
         </ul>
       </div>
     </div>
@@ -417,7 +421,7 @@
         <div class="col-sm-6">
           <div class="team-member">
             <a href="#instructor-modal1" data-toggle="modal">
-              <img class="mx-auto rounded-circle" src="./img/team/005.jpg" alt="">
+              <img class="mx-auto rounded-circle instructor-img" src="./img/team/005.jpg" alt="">
             </a>
             <h4>Lakshmy</h4>
             <p class="text-muted">Vocal and Violin</p>
@@ -464,7 +468,7 @@
         <div class="col-sm-6">
           <div class="team-member">
             <a href="#instructor-modal2" data-toggle="modal">
-                <img class="mx-auto rounded-circle" src="./img/team/002.jpg" alt="">
+                <img class="mx-auto rounded-circle instructor-img" src="./img/team/002.jpg" alt="">
             </a>
             <h4>Ganesh Iyer</h4>
             <p class="text-muted">Kathakali</p>
@@ -504,36 +508,9 @@
           </div>
         </div>
       </div>
-        <!--  Extra Instructor for future Use!!
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>-->
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
-              veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted"></p>
           </div>
         </div>
       </div>
@@ -629,10 +606,10 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
@@ -642,19 +619,9 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
+              <a href="https://www.instagram.com/sabarish.school/" target="__blank">
+                <i class="fab fa-instagram"></i>
               </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
             </li>
           </ul>
         </div>
@@ -881,6 +848,19 @@
   </div> 
 -->
 
+  <!-- Script for Brochure Popup -->
+  <script>
+    var brochure = document.getElementById("brochure");
+    var modal = document.getElementById('brochure-modal');
+    var modalImg = document.getElementById('brochure-image');
+    function dispBroche() {
+      modal.style.display = "block";
+    }
+    var span = document.getElementById('close-brochure');
+    function hideBroche() {
+      modal.style.display = "none";
+    }
+  </script>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
